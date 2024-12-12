@@ -23,8 +23,14 @@ const routes = [
   {
     href: '/cart',
     label: (
-      <div className="flex items-center gap-x-2">
+      <div
+        className="flex items-center gap-x-2 relative"
+        aria-label="Shopping Cart"
+      >
         <ShoppingCart className="h-5 w-5" />
+        <span className="absolute -top-2 -right-2 h-4 w-4 rounded-full bg-primary text-[11px] flex items-center justify-center text-primary-foreground">
+          0
+        </span>
       </div>
     ),
   },
