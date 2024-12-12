@@ -10,6 +10,7 @@ import {
 } from './sheet';
 import { Menu, ShoppingCart } from 'lucide-react';
 import { ModeToggle } from './mode-toggle';
+import Image from 'next/image';
 
 const routes = [
   {
@@ -42,7 +43,16 @@ export default function Nav() {
       <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between w-full">
         <div className="flex items-center">
           <Link href="/" className="ml-4 lg:ml-0">
-            <h1 className="text-xl font-bold">STORE</h1>
+            <div className="flex items-center gap-x-2">
+              <Image
+                src="/assets/Library.svg"
+                alt="Library Logo"
+                width={200}
+                height={50}
+                className="dark:invert"
+                priority
+              />
+            </div>
           </Link>
         </div>
 
