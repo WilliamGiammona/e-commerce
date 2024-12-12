@@ -8,7 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from './sheet';
-import { Menu } from 'lucide-react';
+import { Menu, ShoppingCart } from 'lucide-react';
 import { ModeToggle } from './mode-toggle';
 
 const routes = [
@@ -17,16 +17,16 @@ const routes = [
     label: 'Home',
   },
   {
-    href: '/products',
-    label: 'Products',
-  },
-  {
-    href: '/categories',
-    label: 'Categories',
+    href: '/books',
+    label: 'Books',
   },
   {
     href: '/cart',
-    label: 'Cart',
+    label: (
+      <div className="flex items-center gap-x-2">
+        <ShoppingCart className="h-5 w-5" />
+      </div>
+    ),
   },
 ];
 
